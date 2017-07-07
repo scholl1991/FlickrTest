@@ -10,4 +10,14 @@ import UIKit
 
 class PostCellViewModel: NSObject {
 
+    var smallImageURLString: String?
+    var largeImageURLString: String?
+    var text: String?
+    
+    init(postModel: PostModel) {
+        self.text = postModel.title
+        self.smallImageURLString = postModel.smallImageUrlString
+        self.largeImageURLString = postModel.largeImageURLString
+        super.init()
+    }
 }

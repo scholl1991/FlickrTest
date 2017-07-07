@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum ImageSize {
+    case small
+    case large
+}
+
 class PostModel: NSObject {
 
     var postId: String!
@@ -16,6 +21,14 @@ class PostModel: NSObject {
     var secret: String?
     var owner: String?
     var title: String?
+    
+    var smallImageUrlString: String? {
+        return createImageURLString(size: .small)
+    }
+    
+    var largeImageURLString: String? {
+        return createImageURLString(size: .large)
+    }
     
     init(postId: String, farm: String?, server: String?, secret: String?, owner: String?, title: String?) {
         super.init()
@@ -27,4 +40,19 @@ class PostModel: NSObject {
         self.title = title
     }
     
+    fileprivate func createImageURLString(size: ImageSize) -> String? {
+        guard let uFarm = farm, let uServer = server, let uPostId = postId, let uSecret = secret else {
+            return nil
+        }
+        
+        var sizeString = "z"
+        switch size {
+        case .small:
+            sizeString = "z"
+        case .large:
+            sizeString = "o"
+        }
+        
+        return "https://farm\(uFarm).staticflickr.com/\(uServer)/\(uPostId)_\(uSecret)_\(sizeString).jpg"
+    }
 }

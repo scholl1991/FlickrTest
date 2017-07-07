@@ -7,6 +7,8 @@ target 'FlikrPhotoSearch' do
 
   # Pods for FlikrPhotoSearch
 pod 'Alamofire', '~> 4.5'
+pod 'AlamofireImage', '~> 3.2'
 pod 'SWXMLHash', '~> 4.1'
+pod 'RMGallery', '~> 0.1'
 
 end

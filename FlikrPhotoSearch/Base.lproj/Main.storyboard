@@ -37,7 +37,6 @@
                                 <state key="normal" title="Search"/>
                                 <connections>
                                     <action selector="onSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UBv-6u-VGb"/>
-                                    <segue destination="RPT-ac-Sr4" kind="show" identifier="ShowPostsIdentifier" id="Y8U-YA-bI9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -54,6 +53,7 @@
                     <connections>
                         <outlet property="searchButton" destination="UCJ-7d-Pf9" id="ztd-eu-ZDo"/>
                         <outlet property="textField" destination="5Yd-fN-JHE" id="Jga-ba-Vys"/>
+                        <segue destination="RPT-ac-Sr4" kind="show" identifier="ShowPostsSegue" id="8bW-Kc-TeN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -72,16 +72,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fCl-aD-rKH">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fCl-aD-rKH">
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
                                 <connections>
-                                    <segue destination="WPt-UP-3Vh" kind="embed" id="oMU-OJ-rMF"/>
+                                    <segue destination="WPt-UP-3Vh" kind="embed" identifier="EmbedCollectionViewController" id="oMU-OJ-rMF"/>
                                 </connections>
                             </containerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="y3i-JX-AzI">
+                                <rect key="frame" x="16" y="72" width="343" height="29"/>
+                                <segments>
+                                    <segment title="1"/>
+                                    <segment title="2"/>
+                                    <segment title="3"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentChanged:" destination="RPT-ac-Sr4" eventType="valueChanged" id="a1V-L2-HAF"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="y3i-JX-AzI" firstAttribute="leading" secondItem="OS3-O2-OoZ" secondAttribute="leadingMargin" id="Ca0-qg-cTH"/>
+                            <constraint firstItem="fCl-aD-rKH" firstAttribute="top" secondItem="y3i-JX-AzI" secondAttribute="bottom" constant="8" id="Cai-nr-a9H"/>
+                            <constraint firstItem="fCl-aD-rKH" firstAttribute="top" secondItem="y3i-JX-AzI" secondAttribute="bottom" constant="8" id="IC1-i1-aie"/>
+                            <constraint firstItem="y3i-JX-AzI" firstAttribute="top" secondItem="nVp-Or-zqd" secondAttribute="bottom" constant="8" id="eFV-5E-NJA"/>
+                            <constraint firstItem="fsX-Sm-0uO" firstAttribute="top" secondItem="fCl-aD-rKH" secondAttribute="bottom" id="ogg-jv-57k"/>
+                            <constraint firstItem="fCl-aD-rKH" firstAttribute="leading" secondItem="OS3-O2-OoZ" secondAttribute="leading" id="pdJ-ur-k6L"/>
+                            <constraint firstAttribute="trailing" secondItem="fCl-aD-rKH" secondAttribute="trailing" id="s1p-vd-aqL"/>
+                            <constraint firstItem="y3i-JX-AzI" firstAttribute="trailing" secondItem="OS3-O2-OoZ" secondAttribute="trailingMargin" id="uqU-oB-a9h"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="segmentedControl" destination="y3i-JX-AzI" id="giE-kv-kjn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n38-bZ-4b9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -109,8 +132,8 @@
         <scene sceneID="Fe9-Fl-bdM">
             <objects>
                 <collectionViewController id="WPt-UP-3Vh" customClass="PostsCollectionViewController" customModule="FlikrPhotoSearch" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="wVB-Dg-quz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="wVB-Dg-quz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="559"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="m1v-jd-rKf">
@@ -120,13 +143,28 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="BSb-GM-T4I">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PostCell" id="BSb-GM-T4I" customClass="PostCell" customModule="FlikrPhotoSearch" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImagePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="Jey-es-YbL">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        </imageView>
+                                    </subviews>
                                 </view>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Jey-es-YbL" secondAttribute="trailing" id="4Mc-8g-PEa"/>
+                                    <constraint firstItem="Jey-es-YbL" firstAttribute="leading" secondItem="BSb-GM-T4I" secondAttribute="leading" id="U0H-4l-r9S"/>
+                                    <constraint firstItem="Jey-es-YbL" firstAttribute="top" secondItem="BSb-GM-T4I" secondAttribute="top" id="d59-hI-Vgj"/>
+                                    <constraint firstAttribute="bottom" secondItem="Jey-es-YbL" secondAttribute="bottom" id="ebM-1G-t99"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="imageView" destination="Jey-es-YbL" id="iKN-qz-Ro2"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -158,4 +196,7 @@
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ImagePlaceholder" width="150" height="150"/>
+    </resources>
 </document>

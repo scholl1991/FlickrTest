@@ -13,7 +13,7 @@ class DataSource: NSObject {
     
     static let shared = DataSource()
     
-    fileprivate let networkManager = NetworkManager.init(baseURL: "http://flickr.com/services/rest/")
+    let networkManager = NetworkManager.init(baseURL: "http://flickr.com/services/rest/")
     
     
     func searchPosts(text: String, completion: @escaping (_ results: [PostModel]?, _ error: Error?)->()) {
@@ -30,10 +30,6 @@ class DataSource: NSObject {
 
 extension DataSource {
     fileprivate func postsFromXML(xml: XMLIndexer) -> [PostModel]? {
-        
-//        if let postsXML = xml["photos"].element {
-//            
-//        }
         
         var photos = [PostModel]()
         

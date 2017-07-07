@@ -8,28 +8,43 @@
 
 import UIKit
 
+let EmbedCollectionViewControllerIdentifier = "EmbedCollectionViewController"
+
 class PostsViewController: UIViewController {
 
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    var collectionViewController: PostsCollectionViewController!
+    
+    var postModels: [PostModel]?
+    
+    var postViewModels: [PostCellViewModel]? {
+        
+        guard let models = postModels else {
+            return nil
+        }
+        
+        var postViewModels = [PostCellViewModel]()
+        for post in models {
+            postViewModels.append(PostCellViewModel.init(postModel: post))
+        }
+        
+        return postViewModels
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        collectionViewController.postCellViewModels = postViewModels
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == EmbedCollectionViewControllerIdentifier {
+            self.collectionViewController = segue.destination as! PostsCollectionViewController
+        }
     }
-    */
+    
+    @IBAction func segmentChanged(_ sender: UISegmentedControl) {
+        collectionViewController.columnsNumber = sender.selectedSegmentIndex + 1
+    }
 
 }

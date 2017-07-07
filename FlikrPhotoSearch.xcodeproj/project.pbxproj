@@ -20,6 +20,7 @@
 		EFDCA1EA1F0E60DB00F72D99 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDCA1E91F0E60DB00F72D99 /* PostsViewController.swift */; };
 		EFDCA1EC1F0E60F900F72D99 /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDCA1EB1F0E60F900F72D99 /* PostDetailsViewController.swift */; };
 		EFDCA1EE1F0E614900F72D99 /* PostsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDCA1ED1F0E614900F72D99 /* PostsCollectionViewController.swift */; };
+		EFDCA1F01F0FACF700F72D99 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDCA1EF1F0FACF700F72D99 /* PostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		EFDCA1E91F0E60DB00F72D99 /* PostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 		EFDCA1EB1F0E60F900F72D99 /* PostDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailsViewController.swift; sourceTree = "<group>"; };
 		EFDCA1ED1F0E614900F72D99 /* PostsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsCollectionViewController.swift; sourceTree = "<group>"; };
+		EFDCA1EF1F0FACF700F72D99 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				EFDCA1E91F0E60DB00F72D99 /* PostsViewController.swift */,
 				EFDCA1EB1F0E60F900F72D99 /* PostDetailsViewController.swift */,
 				EFDCA1ED1F0E614900F72D99 /* PostsCollectionViewController.swift */,
+				EFDCA1EF1F0FACF700F72D99 /* PostCell.swift */,
 			);
 			path = FlikrPhotoSearch;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				EFDCA1D21F0E4D2F00F72D99 /* SearchViewController.swift in Sources */,
 				EFDCA1EE1F0E614900F72D99 /* PostsCollectionViewController.swift in Sources */,
 				EFDCA1D01F0E4D2F00F72D99 /* AppDelegate.swift in Sources */,
+				EFDCA1F01F0FACF700F72D99 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +411,7 @@
 				EFDCA1E01F0E4D2F00F72D99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
