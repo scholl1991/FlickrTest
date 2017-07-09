@@ -22,28 +22,24 @@ class NetworkManager: NSObject {
     
     func getPhotos(text: String, completion: @escaping (_ response: Any?, _ error: Error?)->()) {
         
-        let parameters = ["api_key" : "70c3f1cf4bba1aaa01ad2ee6c06e7bb3", "method" : "flickr.photos.search", "text" : text]
+        let parameters = [APIKey : "70c3f1cf4bba1aaa01ad2ee6c06e7bb3", MethodKey : "flickr.photos.search", TextKey : text]
         
         Alamofire.request(baseURLString, parameters: parameters, encoding: URLEncoding.default).response { response in
-            print("Request: \(String(describing: response.request))")
-            print("Response: \(String(describing: response.response))")
-            print("Error: \(String(describing: response.error))")
             
-            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-                print("Data: \(utf8Text)")
-            }
+            // Netowrk layer errors should be handled here
             
             completion(response.data, response.error)
         }
     }
     
-    func requestImage(path: String, completionHandler: @escaping (Image) -> Void){
+    func requestImage(path: String, completionHandler: @escaping (Image?, Error?) -> Void){
         Alamofire.request("\(path)").responseImage(imageScale: 1.5, inflateResponseImage: false, completionHandler: {response in
-            guard let image = response.result.value else{
-                print(response.result)
-                return
+            if let image = response.result.value {
+                completionHandler(image, response.error)
+            } else{
+                completionHandler(nil, response.error)
             }
-            completionHandler(image)
+            
         })
     }
     

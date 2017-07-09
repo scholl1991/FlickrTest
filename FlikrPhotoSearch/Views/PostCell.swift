@@ -23,7 +23,7 @@ class PostCell: UICollectionViewCell {
     }
     
     func update() {
-        if let string = viewModel?.smallImageURLString,
+        if let string = viewModel?.imageURLString,
             let url = URL(string: string) {
             imageView.af_setImage(withURL: url, placeholderImage: UIImage(named: "ImagePlaceholder"))
         } else {

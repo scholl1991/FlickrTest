@@ -9,6 +9,7 @@
 import UIKit
 
 let EmbedCollectionViewControllerIdentifier = "EmbedCollectionViewController"
+let ShowDetailsIdentifier = "ShowDetails"
 
 class PostsViewController: UIViewController {
 
@@ -31,6 +32,22 @@ class PostsViewController: UIViewController {
         return postViewModels
     }
     
+    var postDetailViewModels: [PostDetailsViewModel]? {
+        
+        guard let models = postModels else {
+            return nil
+        }
+        
+        var postViewModels = [PostDetailsViewModel]()
+        for post in models {
+            postViewModels.append(PostDetailsViewModel.init(postModel: post))
+        }
+        
+        return postViewModels
+    }
+    
+    var selectedIndex = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,7 +56,8 @@ class PostsViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == EmbedCollectionViewControllerIdentifier {
-            self.collectionViewController = segue.destination as! PostsCollectionViewController
+            collectionViewController = segue.destination as! PostsCollectionViewController
+            collectionViewController.delegate = self
         }
     }
     
@@ -47,4 +65,15 @@ class PostsViewController: UIViewController {
         collectionViewController.columnsNumber = sender.selectedSegmentIndex + 1
     }
 
+}
+
+extension PostsViewController: PostsCollectionViewControllerDelegate {
+    func postCollection(controller: PostsCollectionViewController, didSelectPostAtIndex: Int) {
+
+        let details = PostDetailsViewController()
+        details.viewModels = postDetailViewModels
+        details.galleryIndex = UInt(didSelectPostAtIndex)
+        let navigation = UINavigationController(rootViewController: details)
+        present(navigation, animated: true, completion: nil)
+    }
 }

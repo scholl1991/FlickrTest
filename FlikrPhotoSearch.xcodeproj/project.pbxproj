@@ -9,18 +9,24 @@
 /* Begin PBXBuildFile section */
 		86B5847E1C35E9041047E455 /* Pods_FlikrPhotoSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0105A9EED3E84A9F50126212 /* Pods_FlikrPhotoSearch.framework */; };
 		EFDCA1D01F0E4D2F00F72D99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDCA1CF1F0E4D2F00F72D99 /* AppDelegate.swift */; };
-		EFDCA1D21F0E4D2F00F72D99 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDCA1D11F0E4D2F00F72D99 /* SearchViewController.swift */; };
 		EFDCA1D51F0E4D2F00F72D99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFDCA1D31F0E4D2F00F72D99 /* Main.storyboard */; };
 		EFDCA1D71F0E4D2F00F72D99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFDCA1D61F0E4D2F00F72D99 /* Assets.xcassets */; };
 		EFDCA1DA1F0E4D2F00F72D99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFDCA1D81F0E4D2F00F72D99 /* LaunchScreen.storyboard */; };
-		EFDCA1E21F0E5C0000F72D99 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDCA1E11F0E5C0000F72D99 /* DataSource.swift */; };
-		EFDCA1E41F0E5C1500F72D99 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDCA1E31F0E5C1500F72D99 /* NetworkManager.swift */; };
-		EFDCA1E61F0E5C2900F72D99 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDCA1E51F0E5C2900F72D99 /* PostModel.swift */; };
-		EFDCA1E81F0E5C4F00F72D99 /* PostCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDCA1E71F0E5C4F00F72D99 /* PostCellViewModel.swift */; };
-		EFDCA1EA1F0E60DB00F72D99 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDCA1E91F0E60DB00F72D99 /* PostsViewController.swift */; };
-		EFDCA1EC1F0E60F900F72D99 /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDCA1EB1F0E60F900F72D99 /* PostDetailsViewController.swift */; };
-		EFDCA1EE1F0E614900F72D99 /* PostsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDCA1ED1F0E614900F72D99 /* PostsCollectionViewController.swift */; };
-		EFDCA1F01F0FACF700F72D99 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDCA1EF1F0FACF700F72D99 /* PostCell.swift */; };
+		EFDCA2021F12C31D00F72D99 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDCA1F41F12C31D00F72D99 /* PostModel.swift */; };
+		EFDCA2031F12C31D00F72D99 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDCA1F61F12C31D00F72D99 /* DataSource.swift */; };
+		EFDCA2041F12C31D00F72D99 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDCA1F71F12C31D00F72D99 /* NetworkManager.swift */; };
+		EFDCA2051F12C31D00F72D99 /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDCA1F91F12C31D00F72D99 /* PostDetailsViewController.swift */; };
+		EFDCA2061F12C31D00F72D99 /* PostsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDCA1FA1F12C31D00F72D99 /* PostsCollectionViewController.swift */; };
+		EFDCA2071F12C31D00F72D99 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDCA1FB1F12C31D00F72D99 /* PostsViewController.swift */; };
+		EFDCA2081F12C31D00F72D99 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDCA1FC1F12C31D00F72D99 /* SearchViewController.swift */; };
+		EFDCA2091F12C31D00F72D99 /* PostCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDCA1FE1F12C31D00F72D99 /* PostCellViewModel.swift */; };
+		EFDCA20A1F12C31D00F72D99 /* PostDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDCA1FF1F12C31D00F72D99 /* PostDetailsViewModel.swift */; };
+		EFDCA20B1F12C31D00F72D99 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDCA2011F12C31D00F72D99 /* PostCell.swift */; };
+		EFDCA20D1F12C5A200F72D99 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDCA20C1F12C5A200F72D99 /* Constants.swift */; };
+		EFDCA2191F12E33F00F72D99 /* RMGalleryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDCA2121F12E33F00F72D99 /* RMGalleryCell.m */; };
+		EFDCA21A1F12E33F00F72D99 /* RMGalleryTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDCA2141F12E33F00F72D99 /* RMGalleryTransition.m */; };
+		EFDCA21B1F12E33F00F72D99 /* RMGalleryView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDCA2161F12E33F00F72D99 /* RMGalleryView.m */; };
+		EFDCA21C1F12E33F00F72D99 /* RMGalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFDCA2181F12E33F00F72D99 /* RMGalleryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,19 +35,31 @@
 		591BC03C9AD91C5CD8C4DAD5 /* Pods-FlikrPhotoSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlikrPhotoSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlikrPhotoSearch/Pods-FlikrPhotoSearch.release.xcconfig"; sourceTree = "<group>"; };
 		EFDCA1CC1F0E4D2F00F72D99 /* FlikrPhotoSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlikrPhotoSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFDCA1CF1F0E4D2F00F72D99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EFDCA1D11F0E4D2F00F72D99 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		EFDCA1D41F0E4D2F00F72D99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EFDCA1D61F0E4D2F00F72D99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFDCA1D91F0E4D2F00F72D99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EFDCA1DB1F0E4D2F00F72D99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EFDCA1E11F0E5C0000F72D99 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
-		EFDCA1E31F0E5C1500F72D99 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		EFDCA1E51F0E5C2900F72D99 /* PostModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
-		EFDCA1E71F0E5C4F00F72D99 /* PostCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCellViewModel.swift; sourceTree = "<group>"; };
-		EFDCA1E91F0E60DB00F72D99 /* PostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
-		EFDCA1EB1F0E60F900F72D99 /* PostDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailsViewController.swift; sourceTree = "<group>"; };
-		EFDCA1ED1F0E614900F72D99 /* PostsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsCollectionViewController.swift; sourceTree = "<group>"; };
-		EFDCA1EF1F0FACF700F72D99 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		EFDCA1F41F12C31D00F72D99 /* PostModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		EFDCA1F61F12C31D00F72D99 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		EFDCA1F71F12C31D00F72D99 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		EFDCA1F91F12C31D00F72D99 /* PostDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailsViewController.swift; sourceTree = "<group>"; };
+		EFDCA1FA1F12C31D00F72D99 /* PostsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsCollectionViewController.swift; sourceTree = "<group>"; };
+		EFDCA1FB1F12C31D00F72D99 /* PostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
+		EFDCA1FC1F12C31D00F72D99 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		EFDCA1FE1F12C31D00F72D99 /* PostCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCellViewModel.swift; sourceTree = "<group>"; };
+		EFDCA1FF1F12C31D00F72D99 /* PostDetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailsViewModel.swift; sourceTree = "<group>"; };
+		EFDCA2011F12C31D00F72D99 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		EFDCA20C1F12C5A200F72D99 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EFDCA2101F12E33F00F72D99 /* RMGallery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMGallery.h; sourceTree = "<group>"; };
+		EFDCA2111F12E33F00F72D99 /* RMGalleryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMGalleryCell.h; sourceTree = "<group>"; };
+		EFDCA2121F12E33F00F72D99 /* RMGalleryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMGalleryCell.m; sourceTree = "<group>"; };
+		EFDCA2131F12E33F00F72D99 /* RMGalleryTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMGalleryTransition.h; sourceTree = "<group>"; };
+		EFDCA2141F12E33F00F72D99 /* RMGalleryTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMGalleryTransition.m; sourceTree = "<group>"; };
+		EFDCA2151F12E33F00F72D99 /* RMGalleryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMGalleryView.h; sourceTree = "<group>"; };
+		EFDCA2161F12E33F00F72D99 /* RMGalleryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMGalleryView.m; sourceTree = "<group>"; };
+		EFDCA2171F12E33F00F72D99 /* RMGalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMGalleryViewController.h; sourceTree = "<group>"; };
+		EFDCA2181F12E33F00F72D99 /* RMGalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMGalleryViewController.m; sourceTree = "<group>"; };
+		EFDCA21D1F12E42D00F72D99 /* FlikrPhotoSearch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlikrPhotoSearch-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,22 +112,90 @@
 		EFDCA1CE1F0E4D2F00F72D99 /* FlikrPhotoSearch */ = {
 			isa = PBXGroup;
 			children = (
+				EFDCA1F31F12C31D00F72D99 /* Models */,
+				EFDCA1F51F12C31D00F72D99 /* Services */,
+				EFDCA1F81F12C31D00F72D99 /* ViewControllers */,
+				EFDCA1FD1F12C31D00F72D99 /* ViewModels */,
+				EFDCA2001F12C31D00F72D99 /* Views */,
+				EFDCA20E1F12E30100F72D99 /* 3d party */,
 				EFDCA1CF1F0E4D2F00F72D99 /* AppDelegate.swift */,
-				EFDCA1D11F0E4D2F00F72D99 /* SearchViewController.swift */,
 				EFDCA1D31F0E4D2F00F72D99 /* Main.storyboard */,
 				EFDCA1D61F0E4D2F00F72D99 /* Assets.xcassets */,
 				EFDCA1D81F0E4D2F00F72D99 /* LaunchScreen.storyboard */,
 				EFDCA1DB1F0E4D2F00F72D99 /* Info.plist */,
-				EFDCA1E11F0E5C0000F72D99 /* DataSource.swift */,
-				EFDCA1E31F0E5C1500F72D99 /* NetworkManager.swift */,
-				EFDCA1E51F0E5C2900F72D99 /* PostModel.swift */,
-				EFDCA1E71F0E5C4F00F72D99 /* PostCellViewModel.swift */,
-				EFDCA1E91F0E60DB00F72D99 /* PostsViewController.swift */,
-				EFDCA1EB1F0E60F900F72D99 /* PostDetailsViewController.swift */,
-				EFDCA1ED1F0E614900F72D99 /* PostsCollectionViewController.swift */,
-				EFDCA1EF1F0FACF700F72D99 /* PostCell.swift */,
+				EFDCA21D1F12E42D00F72D99 /* FlikrPhotoSearch-Bridging-Header.h */,
 			);
 			path = FlikrPhotoSearch;
+			sourceTree = "<group>";
+		};
+		EFDCA1F31F12C31D00F72D99 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EFDCA1F41F12C31D00F72D99 /* PostModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EFDCA1F51F12C31D00F72D99 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EFDCA20C1F12C5A200F72D99 /* Constants.swift */,
+				EFDCA1F61F12C31D00F72D99 /* DataSource.swift */,
+				EFDCA1F71F12C31D00F72D99 /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EFDCA1F81F12C31D00F72D99 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EFDCA1F91F12C31D00F72D99 /* PostDetailsViewController.swift */,
+				EFDCA1FA1F12C31D00F72D99 /* PostsCollectionViewController.swift */,
+				EFDCA1FB1F12C31D00F72D99 /* PostsViewController.swift */,
+				EFDCA1FC1F12C31D00F72D99 /* SearchViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EFDCA1FD1F12C31D00F72D99 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				EFDCA1FE1F12C31D00F72D99 /* PostCellViewModel.swift */,
+				EFDCA1FF1F12C31D00F72D99 /* PostDetailsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		EFDCA2001F12C31D00F72D99 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EFDCA2011F12C31D00F72D99 /* PostCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EFDCA20E1F12E30100F72D99 /* 3d party */ = {
+			isa = PBXGroup;
+			children = (
+				EFDCA20F1F12E33F00F72D99 /* RMGallery */,
+			);
+			path = "3d party";
+			sourceTree = "<group>";
+		};
+		EFDCA20F1F12E33F00F72D99 /* RMGallery */ = {
+			isa = PBXGroup;
+			children = (
+				EFDCA2101F12E33F00F72D99 /* RMGallery.h */,
+				EFDCA2111F12E33F00F72D99 /* RMGalleryCell.h */,
+				EFDCA2121F12E33F00F72D99 /* RMGalleryCell.m */,
+				EFDCA2131F12E33F00F72D99 /* RMGalleryTransition.h */,
+				EFDCA2141F12E33F00F72D99 /* RMGalleryTransition.m */,
+				EFDCA2151F12E33F00F72D99 /* RMGalleryView.h */,
+				EFDCA2161F12E33F00F72D99 /* RMGalleryView.m */,
+				EFDCA2171F12E33F00F72D99 /* RMGalleryViewController.h */,
+				EFDCA2181F12E33F00F72D99 /* RMGalleryViewController.m */,
+			);
+			path = RMGallery;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,16 +322,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFDCA1EA1F0E60DB00F72D99 /* PostsViewController.swift in Sources */,
-				EFDCA1E41F0E5C1500F72D99 /* NetworkManager.swift in Sources */,
-				EFDCA1E61F0E5C2900F72D99 /* PostModel.swift in Sources */,
-				EFDCA1E81F0E5C4F00F72D99 /* PostCellViewModel.swift in Sources */,
-				EFDCA1E21F0E5C0000F72D99 /* DataSource.swift in Sources */,
-				EFDCA1EC1F0E60F900F72D99 /* PostDetailsViewController.swift in Sources */,
-				EFDCA1D21F0E4D2F00F72D99 /* SearchViewController.swift in Sources */,
-				EFDCA1EE1F0E614900F72D99 /* PostsCollectionViewController.swift in Sources */,
+				EFDCA2071F12C31D00F72D99 /* PostsViewController.swift in Sources */,
+				EFDCA2041F12C31D00F72D99 /* NetworkManager.swift in Sources */,
+				EFDCA21C1F12E33F00F72D99 /* RMGalleryViewController.m in Sources */,
+				EFDCA2081F12C31D00F72D99 /* SearchViewController.swift in Sources */,
+				EFDCA2031F12C31D00F72D99 /* DataSource.swift in Sources */,
 				EFDCA1D01F0E4D2F00F72D99 /* AppDelegate.swift in Sources */,
-				EFDCA1F01F0FACF700F72D99 /* PostCell.swift in Sources */,
+				EFDCA2091F12C31D00F72D99 /* PostCellViewModel.swift in Sources */,
+				EFDCA2021F12C31D00F72D99 /* PostModel.swift in Sources */,
+				EFDCA2061F12C31D00F72D99 /* PostsCollectionViewController.swift in Sources */,
+				EFDCA21B1F12E33F00F72D99 /* RMGalleryView.m in Sources */,
+				EFDCA20B1F12C31D00F72D99 /* PostCell.swift in Sources */,
+				EFDCA2191F12E33F00F72D99 /* RMGalleryCell.m in Sources */,
+				EFDCA2051F12C31D00F72D99 /* PostDetailsViewController.swift in Sources */,
+				EFDCA20A1F12C31D00F72D99 /* PostDetailsViewModel.swift in Sources */,
+				EFDCA21A1F12E33F00F72D99 /* RMGalleryTransition.m in Sources */,
+				EFDCA20D1F12C5A200F72D99 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +466,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.scholl.FlikrPhotoSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FlikrPhotoSearch/FlikrPhotoSearch-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -388,6 +481,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.scholl.FlikrPhotoSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FlikrPhotoSearch/FlikrPhotoSearch-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

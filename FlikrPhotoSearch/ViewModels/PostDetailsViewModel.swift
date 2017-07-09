@@ -10,4 +10,12 @@ import UIKit
 
 class PostDetailsViewModel: NSObject {
 
+    var imageURLString: String?
+    var text: String?
+    
+    init(postModel: PostModel) {
+        self.text = postModel.title
+        self.imageURLString = postModel.largeImageURLString
+        super.init()
+    }
 }

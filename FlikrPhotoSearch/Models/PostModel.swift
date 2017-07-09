@@ -30,7 +30,7 @@ class PostModel: NSObject {
         return createImageURLString(size: .large)
     }
     
-    init(postId: String, farm: String?, server: String?, secret: String?, owner: String?, title: String?) {
+    init(postId: String, farm: String? = nil, server: String? = nil, secret: String? = nil, owner: String? = nil, title: String? = nil) {
         super.init()
         self.postId = postId
         self.farm = farm
@@ -50,7 +50,7 @@ class PostModel: NSObject {
         case .small:
             sizeString = "z"
         case .large:
-            sizeString = "o"
+            sizeString = "z"
         }
         
         return "https://farm\(uFarm).staticflickr.com/\(uServer)/\(uPostId)_\(uSecret)_\(sizeString).jpg"
