@@ -45,6 +45,10 @@ class PostsCollectionViewController: UICollectionViewController {
     
         return cell
     }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        collectionView?.collectionViewLayout.invalidateLayout()
+    }
 
     // MARK: UICollectionViewDelegate
     

@@ -125,7 +125,7 @@
 
 /**
  Asks the data source for the number images (required).
- @param galleryView The collection view requesting this information.
+ @param image The collection view requesting this information.
  @return The number of images.
  */
 - (NSUInteger)numberOfImagesInGalleryView:(RMGalleryView*)image;
