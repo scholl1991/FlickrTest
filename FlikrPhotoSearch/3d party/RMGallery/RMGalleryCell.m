@@ -42,7 +42,7 @@
         _scrollView.showsHorizontalScrollIndicator = NO;
         _scrollView.showsVerticalScrollIndicator = NO;
         _scrollView.delegate = self;
-        static const CGFloat MaxScale = 1.5;
+        static const CGFloat MaxScale = 5;
         _scrollView.maximumZoomScale = MaxScale;
         [self.contentView addSubview:_scrollView];
 
