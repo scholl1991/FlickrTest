@@ -16,11 +16,20 @@ class DataSource: NSObject {
     let networkManager = NetworkManager.init(baseURL: BaseURL)
     
     
-    func searchPosts(text: String, completion: @escaping (_ results: [PostModel]?, _ error: Error?)->()) {
+    func searchPosts(text: String, completion: @escaping OperationCompletion<[PostModel]>) {
         networkManager.getPhotos(text: text) { (response, error) in
+            guard let response = response as? Data else {
+                completion(OperationResult(error: error))
+                return
+            }
             
-            let xml = SWXMLHash.parse(response as! Data)
-            completion(self.postsFromXML(xml: xml), error)
+            let xml = SWXMLHash.parse(response)
+            
+            if let data = self.postsFromXML(xml: xml) {
+                completion(.success(data))
+            } else {
+                completion(OperationResult(error: error))
+            }
         }
     }
 

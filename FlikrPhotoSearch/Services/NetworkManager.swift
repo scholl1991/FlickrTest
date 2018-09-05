@@ -8,7 +8,6 @@
 
 import UIKit
 import Alamofire
-import AlamofireImage
 
 class NetworkManager: NSObject {
 
@@ -31,16 +30,4 @@ class NetworkManager: NSObject {
             completion(response.data, response.error)
         }
     }
-    
-    func requestImage(path: String, completionHandler: @escaping (Image?, Error?) -> Void){
-        Alamofire.request("\(path)").responseImage(imageScale: 1.5, inflateResponseImage: false, completionHandler: {response in
-            if let image = response.result.value {
-                completionHandler(image, response.error)
-            } else{
-                completionHandler(nil, response.error)
-            }
-            
-        })
-    }
-    
 }

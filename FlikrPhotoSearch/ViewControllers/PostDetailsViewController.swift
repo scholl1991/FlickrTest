@@ -40,10 +40,15 @@ extension PostDetailsViewController: RMGalleryViewDataSource, RMGalleryViewDeleg
     func galleryView(_ galleryView: RMGalleryView!, imageFor index: UInt, completion completionBlock: ((UIImage?) -> Swift.Void)!) {
         
         if let imageURLString = viewModels?[Int(index)].imageURLString {
-            DataSource.shared.networkManager.requestImage(path: imageURLString) { (image, error) in
-                print("loaded image for index: \(index) and url: \(imageURLString)")
-                DispatchQueue.main.async {
-                    completionBlock(image)
+            DataSource.shared.networkManager.requestImage(path: imageURLString) { (result) in
+                switch result {
+                case .success(let image):
+                    print("loaded image for index: \(index) and url: \(imageURLString)")
+                    DispatchQueue.main.async {
+                        completionBlock(image)
+                    }
+                case .failure(let error):
+                    debugPrint(error)
                 }
             }
         }

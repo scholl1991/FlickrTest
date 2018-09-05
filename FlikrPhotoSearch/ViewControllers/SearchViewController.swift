@@ -22,14 +22,19 @@ class SearchViewController: UIViewController {
 
     @IBAction func onSearch(_ sender: UIButton) {
         if let text = textField.text {
-            DataSource.shared.searchPosts(text: text) { (models, error) in
-                guard error == nil else {
-                    // handle error
-                    return
-                }
+            DataSource.shared.searchPosts(text: text) { result in
                 
-                DispatchQueue.main.async {
-                    self.performSegue(withIdentifier: ShowPostsSegueIdentifier, sender: models)
+                switch result {
+                case .success(let models):
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: ShowPostsSegueIdentifier, sender: models)
+                    }
+                case .failure(let error):
+                    let alert = UIAlertController(title: "Sorry", message: error.localizedDescription, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .cancel))
+                    DispatchQueue.main.async {
+                        self.present(alert, animated: true)
+                    }
                 }
             }
         }
